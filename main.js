@@ -13,7 +13,7 @@ function onLocationFound(e) {
   var radius = e.accuracy;
 
   L.marker(e.latlng).addTo(map)
-   .bindPop("You are within " + radius + " from this point").openPopup();
+   .bindPopup("You are within " + radius + " from this point").openPopup();
 
   L.circle(e.latlng, radius).addTo(map);
 };
